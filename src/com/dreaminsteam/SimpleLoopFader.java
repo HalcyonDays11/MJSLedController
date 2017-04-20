@@ -20,7 +20,6 @@ public class SimpleLoopFader {
 	public static void main(String[] args){
 		List<MJSLedController> connectedControllers = MJSLedController.getConnectedControllers();
 		Optional<MJSLedController> anyController = connectedControllers.stream().findAny();
-		
 		anyController.ifPresent((controller) -> {
 			ColorFader fader = new ColorFader(controller);
 			List<Color> randomColorList = ColorFader.getRandomColorList();
